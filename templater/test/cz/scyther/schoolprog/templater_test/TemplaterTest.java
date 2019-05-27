@@ -40,7 +40,7 @@ public class TemplaterTest {
     }
 
     @Test
-    public void var_normalInput() {
+    public void analyzeTest() {
         assertEquals(answer, analyze(args));
     }
 
