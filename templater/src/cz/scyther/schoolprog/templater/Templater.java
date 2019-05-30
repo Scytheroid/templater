@@ -1,18 +1,15 @@
 package cz.scyther.schoolprog.templater;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Templater {
     public static void main(String[] args) throws IOException {
-        String template = parseString("text.txt");
+        String template = parseString("templater/text.txt");
         HashMap<String, String> tags = analyze(args);
         tags.put("blbost", "kravina");
 
@@ -34,7 +31,7 @@ public class Templater {
     }
 
     public static String parseString(String name) throws IOException {
-         return new String(Files.readAllBytes(Paths.get("text.txt")));
+         return new String(Files.readAllBytes(Paths.get("res/text.txt")));
     }
     // IELTS
 }
